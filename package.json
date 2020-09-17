@@ -1,6 +1,6 @@
 {
   "name": "yn-components",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": false,
   "keywords": [
     "vue component",
@@ -19,8 +19,9 @@
   },
   "typings": "types/index.d.ts",
   "files": [
-    "lib/*.js",
-    "types/*.d.ts"
+    "lib",
+    "types",
+    "es"
   ],
   "dependencies": {
     "core-js": "^3.6.4",
