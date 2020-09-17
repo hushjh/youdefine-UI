@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-09-15 16:35:36
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-09-16 10:58:29
+* @Last Modified time: 2020-09-17 13:34:43
 * @E-mail: justbefree@126.com
 */
 const path = require("path");
@@ -10,6 +10,17 @@ const fs = require("fs");
 const chalk = require('chalk');
 const log = console.log;
 module.exports = {
+  capitalize: (str = "") => {
+    return str.replace(/\B([A-Z])/g, "-$1").toLowerCase();
+  },
+  camelize: (str = "", upperCaseFirstLetter = false) => {
+    let ca = str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ""));
+    if (upperCaseFirstLetter) {
+      return ca.replace(/\b\w/g, (f) => f.toUpperCase());
+    } else {
+      return ca;
+    }
+  },
   genComponentLibs: (pathName, exculde = []) => {
     const components = {};
     const files = fs.readdirSync(pathName);
