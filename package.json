@@ -1,6 +1,6 @@
 {
   "name": "yn-components",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "private": false,
   "keywords": [
     "vue component",
@@ -8,6 +8,7 @@
   ],
   "description": "A vue components lib spically for business-travel",
   "main": "lib/yn-components.umd.min.js",
+  "module": "es/index.js",
   "author": "just be free <justbefree@126.com>",
   "scripts": {
     "build:esm": "node build/es/rollup.build.js",
@@ -39,6 +40,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "less": "^3.11.1",
