@@ -46,8 +46,13 @@ export default {
   methods: {
     filter() {
       this.hasAnimation = false;
+      // this.asyncData = [];
+      // this.getData();
+      const temp = this.asyncData.reverse();
       this.asyncData = [];
-      this.getData();
+      this.$nextTick(() => {
+        this.asyncData = temp;
+      });
     },
     getData() {
       setTimeout(() => {
